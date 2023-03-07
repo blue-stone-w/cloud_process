@@ -63,7 +63,6 @@ namespace my_icp_base_namespace
             Eigen::Matrix<double, 6, 1> b_sum(Eigen::Matrix<double, 6, 1>::Zero());
             for (size_t j = 0; j < source.size(); j += step)
             {
-
                 const Eigen::Vector3d p_src = source.at(j);
                 // source点云变换R,t
                 Eigen::Vector3d p_src_T = R * p_src + t;
@@ -88,7 +87,7 @@ namespace my_icp_base_namespace
                 Eigen::Vector3d q(target_cloud->at(k_indices[0]).x, target_cloud->at(k_indices[0]).y, target_cloud->at(k_indices[0]).z);
                 // f(x)误差函数就是两个向量的差
                 Eigen::Matrix<double, 3, 1> f_x = p_src_T - q;
-                // hat: convert rotation vector to deskewed matrix
+                // hat: convert rotation vector to skewed matrix
                 J.block<3, 3>(0, 0) = -R * Sophus::SO3::hat(p_src);
                 // 右侧为平移
                 J.block<3, 3>(0, 3) = Eigen::Matrix3d::Identity();
