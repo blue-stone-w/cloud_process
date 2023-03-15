@@ -9,3 +9,10 @@ PnP solvers:
 
 dependencies:
 stlplus3(STLplus C++ library collection);
+
+### noted files or folders
+* /src/pnpsolvers: pnp
+
+
+### reference articles
+* A Novel Parametrization of the Perspective-Three-Point Problem for a Direct Computation of Absolute Camera Position and Orientation

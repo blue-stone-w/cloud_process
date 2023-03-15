@@ -15,6 +15,11 @@
  *      Output: int: 0 if correct execution
  *                  -1 if world points aligned
  */
+
+// article: <A Novel Parametrization of the Perspective-Three-Point Problem for
+//           a Direct Computation of Absolute Camera Position and Orientation>
+// You can find it in my repo "example" in folder "reference"
+
 #pragma once
 #include <Eigen/Core>
 #include <Eigen/StdVector>
